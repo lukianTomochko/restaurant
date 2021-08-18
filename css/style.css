@@ -1,0 +1,1053 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    height: 100vh;
+}
+
+header,
+header:before {
+    background: 50% 50% / cover;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(../images/meat-1155132_1920.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.durkBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+}
+
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    background: #0e1111;
+}
+
+.logoBlock {
+    width: 100%;
+    height: 90px;
+    padding: 0.1px;
+    background: #fc9c0c;
+}
+
+.logoBlock h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-top: 24px;
+    text-align: center;
+}
+
+.nav h3 {
+    color: #fff;
+    margin-top: 80px;
+    font-size: 22px;
+    transform: rotateZ(-90deg);
+}
+
+.header h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.burgerMenu {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 17px;
+    margin-left: 7px;
+}
+
+.openMenu,
+.closeMenu {
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+    padding: 0;
+    transition: .3s;
+}
+
+.closeMenu {
+    display: none;
+}
+
+.burgerMenu div:hover {
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.burgerMenu div:active {
+    opacity: .8;
+    transition: .14s;
+}
+
+.burgerMenu div img {
+    width: 50px;
+    height: 50px;
+}
+
+.burgerMenuSection {
+    position: absolute;
+    top: 0;
+    left: -210px;
+    width: 300px;
+    height: 100vh;
+    background: #0e1111;
+    transition: .5s;
+    z-index: 1;
+}
+
+.burgerMenuSwitch {
+    left: 90px;
+    transition: .5s;
+}
+
+.burgerMenu_ul {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    margin-left: -260px;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    transition: .8s;
+}
+
+.burgerMenu_ul_switch {
+    margin-left: 20px;
+    transition: .8s;
+}
+
+.menu_li {
+    width: 220px;
+    list-style: none;
+    margin-bottom: 38px;
+    transition: .5s;
+}
+
+.menu_link {
+    font-size: 32px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+.menu_link:hover {
+    opacity: .6;
+    transition: .5s;
+}
+
+.menu_li:hover .menu_link {
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.desriptionBlock {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 350px;
+    left: 200px;
+    top: 80px;
+    padding-top: 50px;
+    z-index: 0;
+    color: #fff;
+}
+
+.desriptionBlock h2 {
+    width: 450px;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.desriptionBlock h2 span {
+    color: #fc9c0c;
+}
+
+.desriptionBlock p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.linkOrder {
+    position: relative;
+    width: 170px;
+    background: #fc9c0c;
+    text-align: center;
+    padding: 15px 0px;
+    padding-right: 23px;
+    border-radius: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+.linkOrder:hover {
+    background: #cc7f0c;
+    transition: .5s;
+}
+
+
+
+.linkOrderArrow {
+    position: absolute;
+    top: 12px;
+    right: 26px;
+    transition: 0.3s;
+}
+
+.linkOrderArrow img{
+    width: 25px;
+    height: 25px;
+}
+
+.linkOrder:hover .linkOrderArrow {
+    right: 18px;
+    transition: 0.3s;
+}
+
+
+.offering_block {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 680px;
+    top: 100vh;
+    background: #141515;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    padding-left: 0;
+    color: grey;
+}
+
+.offerring_block_offer1 {
+    cursor: pointer;
+    position: relative;
+    width: 500px;
+    height: 550px;
+    overflow: hidden;
+}
+
+.offerring_block_offer1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .55;
+    z-index: 1;
+}
+
+.offerring_block_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../images/spicySteakOffer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.offerring_block_offer1:hover .offerring_block_bg {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.offerring_block_border {
+    position: relative;
+    margin-top: 24px;
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    border: 2px solid #fff;
+    color: #fff;
+    z-index: 1;
+}
+
+.offerring_block_border h3,
+.offerring_block_border h2 {
+    margin-left: 17px;
+}
+
+.offerring_block_border h3 {
+    margin-bottom: -15px;
+    font-size: 18px;
+}
+
+.offerring_block_border h2 {
+    font-size: 27px;
+}
+
+.offerring_block_offer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 550px;
+    margin-left: 30px;
+}
+
+.offerring_block_small {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+
+}
+
+.offerring_block_small::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .55;
+    z-index: 1;
+}
+
+.offerring_block_small1_bg,
+.offerring_block_small2_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../images/friesOffer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .5s;
+}
+
+.offerring_block_small2_bg {
+    background: url(../images/dessertOffer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.offerring_block_small:hover .offerring_block_small1_bg,
+.offerring_block_small:hover .offerring_block_small2_bg {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.offerring_block_small_border {
+    position: relative;
+    margin-top: 20px;
+    margin-left: 4%;
+    width: 90%;
+    height: 220px;
+    border: 2px solid #fff;
+    color: #fff;
+    z-index: 1;
+}
+
+.offerring_block_small_border h3,
+.offerring_block_small_border h2 {
+    margin-left: 17px;
+}
+
+.offerring_block_small_border h3 {
+    margin-bottom: -15px;
+    font-size: 18px;
+}
+
+.offerring_block_small_border h2 {
+    font-size: 27px;
+}
+
+.TopPicksContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 758px;
+    background: #141515;
+}
+
+.TopPicks_topBlock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TopPicks_line {
+    width: 93px;
+    height: 3px;
+    background: #ce841a;
+}
+
+.TopPicks_topBlock h3 {
+    margin: 0px 25px;
+}
+
+.TopPicks_titleBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TopPicks_titleBlock h1 {
+    font-size: 45px;
+}
+
+.TopPicks_titleBlock p {
+    width: 580px;
+    text-align: center;
+    line-height: 27px;
+    margin-top: 0;
+}
+
+.TopPicks_changeCategoryBlock {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.TopPicks_iconBlock {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    width: 80px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.iconBlock_animBlock {
+    position: absolute;
+    margin-top: -13px;
+    margin-left: 70px;
+    bottom: -120px;
+    width: 3px;
+    height: 100%;
+    background: #ce841a;
+    border-radius: 10px;
+    opacity: .8;
+    transition: .4s;
+    /*    opacity: .7;*/
+}
+
+.iconBlock_animBlock:first-child{
+    margin-left: -70px;
+}
+
+.iconBlock_animBlock_active{
+    bottom: 10px
+}
+
+
+.TopPicks_iconBlock_img {
+    width: 55px;
+    height: 55px;
+    z-index: 1;
+}
+
+
+.TopPicks_iconBlock p {
+    margin-top: 10px;
+    transition: .2s;
+    z-index: 1;
+}
+
+
+.TopPicks_iconBlock:hover p {
+    color: #ce841a;
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.TopPicks_offersContainer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.TopPicks_offersContainer2, .TopPicks_offersContainer3{
+    display: none;
+}
+
+.TopPicks_offersContainer_active{
+    display: flex;
+}
+.TopPicks_offersContainer_nonactive{
+    display: none;
+}
+
+.TopPicks_wrapper_offersContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 580px;
+    margin-top: 60px;
+}
+
+.offersContainerImage{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    overflow: hidden;
+}
+
+
+.offersContainerImage::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    opacity: .2;
+}
+
+.offersContainer_durkBG_hover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 20px;
+    border-top-left-radius: 70px;
+    opacity: 0;
+    transition: .4s;
+}
+
+.offersContainerImage:hover .offersContainer_durkBG_hover{
+    opacity: .4;
+    transition: .4s;
+}
+
+.offersContainer_btn_addToOrder, .offersContainer_btn_addToOrder2{
+    cursor: pointer;
+    position: absolute;
+    width: 170px;
+    background: #fc9c0c;
+    text-align: center;
+    margin-top: -100px;
+    margin-left: 90px;
+    opacity: .8;
+    padding: 15px 0px;
+    border-radius: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+.offersContainerImage:hover .offersContainer_btn_addToOrder{
+    margin-top: 70px;
+    transition: .5s;
+}
+
+.offersContainerImage:hover .offersContainer_btn_addToOrder2{
+    margin-top: 190px;
+    transition-delay: .8s;
+    transition: .5s;
+}
+
+.offersContainer_btn_addToOrder:hover, .offersContainer_btn_addToOrder2:hover{
+    opacity: 1;
+    transition: .5s;
+}
+
+
+.offersContainerImage1{
+    background: no-repeat url(../images/meals1.jpg);
+    background-size: cover;
+}
+.offersContainerImage2{
+    background: no-repeat url(../images/meals2.jpg);
+    background-size: cover;
+}
+.offersContainerImage3{
+    background: no-repeat url(../images/meals3.jpg);
+    background-size: cover;
+}
+.offersContainerImage4{
+    background: no-repeat url(../images/burger1.jpg);
+    background-size: cover;
+}
+.offersContainerImage5{
+    background: no-repeat url(../images/burger2.jpg);
+    background-size: cover;
+    background-position: right;
+}
+.offersContainerImage6{
+    background: no-repeat url(../images/burger3.jpg);
+    background-size: cover;
+}
+.offersContainerImage7{
+    background: no-repeat url(../images/drink1.jpg);
+    background-size: cover;
+    background-position: right;
+}
+.offersContainerImage8{
+    background: no-repeat url(../images/drink2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.offersContainerImage9{
+    background: no-repeat url(../images/drink3.jpg);
+    background-size: cover;
+}
+
+.offersContainer_block h3{
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+.offersContainer_block h2{
+    font-size: 17px;
+    margin-top: 12px;
+    color: #e1901b;
+}
+
+.offersContainer_block a{
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+
+.offersContainer_block a:hover{
+    color: #e1901b;
+    transition: .3s;
+}
+
+.offersContainer_block p{
+    width: 340px;
+    color: #8c8c8c;
+    line-height: 25px;
+}
+
+.dealOfTheDayContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 490px;
+    background: url(../images/bg_dealOfDay.jpg);    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -2;
+}
+
+.dealOfTheDayContainer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: .4;
+    z-index: -1;
+}
+
+.dealOfTheDay_topBlock{
+    font-size: 16px;
+}
+
+.dealOfTheDay_Title{
+    font-size: 43px;
+    font-weight: bold;
+    margin-top: 23px;
+}
+
+.dealOfTheDay_price{
+    font-size: 35px;
+    font-weight: bold;
+    color: #e1901b;
+    margin-top: 22px;
+}
+
+.dealOfTheDay_manuIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    margin-top: 45px;
+}
+
+.dealOfTheDay_plus{
+    font-size: 30px;
+    color: #e1901b;
+}
+
+.dealOfTheDay_iconBurgerBlock img, .dealOfTheDay_iconDrinkBlock img{
+    width: 55px;
+    height: 55px;
+} 
+
+.dealOfTheDay_btn{
+    position: relative;
+    margin: 0;
+    margin-top: 20px;
+    opacity: 1;
+    transition: .4s;
+}
+
+.dealOfTheDay_btn:hover{
+    background: #ad6c0e;
+    transition: .4s;
+}
+
+.reviewsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #141515;
+}
+
+.reviews_topBlock{
+    margin-top: 75px;
+}
+
+.owlCarouselContainer{
+    width: 90%;
+    margin-top: 95px;
+    margin-bottom: 70px;
+}
+
+.owlCarusel-nav-left, .owlCarusel-nav-right{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    background: transparent url(../images/UI/arrow2.png) no-repeat center;
+    background-size: 70% 70%;
+    margin-top: 50px;
+    transition: .3s;
+}
+
+.owlCarusel-nav-left span, .owlCarusel-nav-right span{
+    display: none;
+}
+
+
+.owlCarusel-nav-left:hover, .owlCarusel-nav-right:hover{
+    opacity: .7;
+    transition: .3s;
+}
+.owlCarusel-nav-left:active, .owlCarusel-nav-right:active{
+    opacity: .5;
+    transition: .3s;
+}
+
+.owlCarusel-nav-left{
+    transform: scaleX(-1);
+    margin-right: 20px;
+    margin-left: 46%;
+}
+
+.owlCarouselBlock{
+    width: 370px;
+    height: 370px;
+    margin-left: 40px;
+    background: #1f1f1f;
+}
+
+.owlCarouselBlock_wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.owlCarouselBlock_wrapper:hover .owlCarouselBlock_hover{
+    opacity: 1;
+    transition: .3s;
+}
+
+.owlCarouselBlock_hover{
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: #e1901b;
+    transition: .3s;
+}
+
+.owlCarouselBlock_wrapper p{
+    width: 90%;
+    text-align: center;
+    line-height: 28px;
+    z-index: 1;
+}
+
+.owlCarouselBlock_wrapper h3{
+    z-index: 1;
+}
+
+.ownCarusel_Icon{
+    width: 26px;
+    height: 30px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.owlCarusel_PersonImg{
+    width: 115px;
+    height: 115px;
+    margin-top: -60px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.footerWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -30px;
+    background: #141110;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 84%;
+    height: 350px;
+    background: #141110;
+    margin-top: 50px;
+}
+
+.block_Text_SocMedia h2{
+    font-size: 35px;
+}
+
+.block_Text_SocMedia p{
+    width: 270px;
+    line-height: 30px;
+    color: #999999;
+}
+
+.SocMediaBlock{
+    width: 210px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.SocMediaBlock_icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 100%;
+    background: #1f1f1f;
+    transition: .3s;
+}
+
+.SocMediaBlock_icon:hover{
+    background: #e1901b;
+    transition: .3s;
+}
+
+.SocMediaBlock_icon img{
+    width: 23px;
+    height: 23px;
+}
+
+.FooterMenu_ul{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 650px;
+    margin-top: 50px;
+    text-align: end;
+}
+
+.mobile_FooterMenu_ul{
+    display: none;
+    flex-direction: row;
+    margin-top: 0;
+    width: 360px;
+}
+
+.mobile2_FooterMenu_ul{
+    display: none;
+}
+
+.Footermenu_li{
+    list-style: none;
+    margin-left: 20px;
+    margin-top: 14px;
+}
+
+.Footermenu_link{
+    font-size: 18px;
+    font-style: italic;
+    text-decoration: none;
+    color: #999999;
+    
+}
+
+.Footermenu_link:hover{
+    color: #ffff;
+    transition: .3s;
+}
+
+.instagramBlock{
+    margin-left: 40px;
+}
+
+.instagramBlock_Grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 750px;
+    height: 170px;
+    border-bottom: 1px solid #c07c1a;
+}
+
+.instagramBlock_Grid_img{
+    margin-top: 12px;
+    width: 86px;
+    height: 86px;
+}
+
+
+.instagramBlock_Grid_img img{
+    width: 86px;
+    height: 86px;
+    opacity: 
+} 
+
+.blockMadeWith{
+    width: 100%;
+    height: 70px;
+    background: #141515;
+}
+
+.blockMadeWith p{
+    margin-left: 125px;
+    margin-top: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
